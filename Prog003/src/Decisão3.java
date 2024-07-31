@@ -11,23 +11,19 @@ public class Decisão3 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int idade;
-        final double INTEIRA = 26, MEIA = INTEIRA/2;
+        final double INTEIRA = 26, MEIA = INTEIRA / 2;
         double valorIngresso;
 
         // digita a idade
         System.out.print("Digite a idade: ");
         idade = teclado.nextInt();
 
-        if(idade < 18){ // é menor?
+        if (idade < 18) { // é menor?
             valorIngresso = MEIA;
-        }
-        else { // senão
-            if (idade >= 65) { // é idoso?
-                valorIngresso = MEIA;
-            }
-            else {
-                valorIngresso = INTEIRA;
-            }
+        } else if (idade >= 65) { // é idoso?
+            valorIngresso = MEIA;
+        } else {
+            valorIngresso = INTEIRA;
         }
 
         // imprime o ingresso

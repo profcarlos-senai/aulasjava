@@ -7,7 +7,7 @@
 
 import java.util.Scanner;
 
-public class Decisão3 {
+public class Decisão3b {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int idade;
@@ -22,6 +22,7 @@ public class Decisão3 {
             valorIngresso = MEIA;
         }
         else { // senão
+            System.out.println("Não sei se é meia");
             if (idade >= 65) { // é idoso?
                 valorIngresso = MEIA;
             }

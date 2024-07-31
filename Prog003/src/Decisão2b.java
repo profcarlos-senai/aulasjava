@@ -6,19 +6,21 @@
 
 import java.util.Scanner;
 
-public class Decisão2 {
+public class Decisão2b {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int idade;
-        double valorIngresso = 26;
+        double valorIngresso;
 
         // digita a idade
         System.out.print("Digite a idade: ");
         idade = teclado.nextInt();
 
         // se for menor de idade paga meia
-        if(idade < 18){
+        if (idade < 18) {
             valorIngresso = 13;
+        } else {
+            valorIngresso = 26;
         }
 
         // imprime o ingresso

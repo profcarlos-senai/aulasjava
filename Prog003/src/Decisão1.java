@@ -7,7 +7,7 @@ Numero7: um vendedor quer calcular o desconto de um produto. ele vai informar o
   ex: produto de R$ 80 (não vai pedir desconto) e o preço final é R$ 80,00
   ex: o preço é 2000. O desconto é 5%, que dá R$ 100 e o preço final é 1900
  */
-public class Decisao1 {
+public class Decisão1 {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
 

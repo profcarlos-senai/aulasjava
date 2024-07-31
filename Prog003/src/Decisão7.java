@@ -3,7 +3,7 @@ import java.util.Scanner;
 /*
   Perguntar idade e genero e responder algumas perguntas
 */
-public class Decisao7 {
+public class Decisão7 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
