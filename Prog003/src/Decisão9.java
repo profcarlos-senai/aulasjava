@@ -9,9 +9,27 @@ public class Decisão9 {
     */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int ladoA=3, ladoB=4, ladoC=5;
-        boolean okA, okB, okC;
+        int a,b,c;
 
-        okA = (ladoA < ladoB+ladoC);
+        System.out.print("Digite os tres lados: ");
+        a = teclado.nextInt();
+        b = teclado.nextInt();
+        c = teclado.nextInt();
+
+        if( (a<b+c) && (b<a+c) && (c<a+b)){
+            System.out.println("É um triângulo");
+
+            // descobre se é equilátero
+            if( (a==b) && (b==c)){
+                System.out.println("é equilátero");
+            } else if ( (a==b && b!=c) || (a==c && c!=b) || (b==c && c!=a)) {
+                System.out.println("é isósceles");
+            } else {
+                System.out.println("Escaleno");
+            }
+
+        } else {
+            System.out.println("Não é um triângulo");
+        }
     }
 }
