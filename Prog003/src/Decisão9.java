@@ -9,27 +9,31 @@ public class Decisão9 {
     */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int a,b,c;
+        double a, b, c;
 
         System.out.print("Digite os tres lados: ");
-        a = teclado.nextInt();
-        b = teclado.nextInt();
-        c = teclado.nextInt();
+        a = teclado.nextDouble();
+        b = teclado.nextDouble();
+        c = teclado.nextDouble();
 
-        if( (a<b+c) && (b<a+c) && (c<a+b)){
+        if ((a < b + c) && (b < a + c) && (c < a + b)) {
             System.out.println("É um triângulo");
 
             // descobre se é equilátero
-            if( (a==b) && (b==c)){
+            if ((a == b) && (b == c)) {
                 System.out.println("é equilátero");
-            } else if ( (a==b && b!=c) || (a==c && c!=b) || (b==c && c!=a)) {
+            } else if ((a == b) || (a == c) || (b == c)) {
                 System.out.println("é isósceles");
             } else {
                 System.out.println("Escaleno");
             }
-
-        } else {
-            System.out.println("Não é um triângulo");
+        // ver se é retângulo (testa se bate o teorema de pitágoras a=b²+c²
+        if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == a * a + b * b)) {
+            System.out.println("É um triângulo retângulo");
         }
+
+    } else  {
+        System.out.println("Não é um triângulo");
     }
+}
 }
