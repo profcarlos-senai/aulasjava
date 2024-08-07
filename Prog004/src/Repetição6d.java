@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Repetição6 {
+public class Repetição6d {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         int peso=0, total=0;
@@ -13,14 +13,15 @@ public class Repetição6 {
             // pergunta o peso
             System.out.println("Qual o seu peso? ");
             peso = leitor.nextInt();
-            total = total + peso; // deixei esse cara entrar
-        } // acabou o while aqui
 
-        // se estourou o peso chuta uma pessoa pra fora
-        if(total > 300){
-            System.out.println("Excesso de peso, você não pode entrar");
-            total = total - peso; // chuta o ultimo cara pra fora
-        }
+            // decide se pode entrar
+            if(total+peso <= 300) { // pode subir
+                total = total + peso;
+            } else {
+                System.out.println("Não pode entrar, gorducho.");
+                break; // força a cair fora do while
+            }
+        } // acabou o while aqui
 
         // no final diz que tá subindo e a soma
         System.out.printf("SUBINDO! Peso total: %d kg\n", total);
