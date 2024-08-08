@@ -1,14 +1,27 @@
+import java.util.Scanner;
+
 public class Exemplo1 {
     public static void main(String[] args) {
-        int idade = 13;
-        double peso = 45.123;
-        String nome = "Juquinha";
+        /*
+        classificar um atleta em categorias dependendo do peso
+        pena: abaixo de 57kg
+        médio: de 57 a 77
+        meio-pesado: 77 a 85
+        pesado: acima de 85
+        */
+        Scanner teclado = new Scanner(System.in);
 
-        // imprime com printf
-        System.out.printf("Meu nome é %-30s, peso %.1fkg e tenho %d anos.\n", nome, peso, idade);
+        System.out.print("Digite seu peso: ");
+        float peso = teclado.nextFloat();
 
-        // formata uma string igualzinho ao printf e imprime
-        String saida = String.format("Meu nome é %-30s, peso %.1fkg e tenho %d anos.\n", nome, peso, idade);
-        System.out.print(saida);
+        if(peso < 57){
+            System.out.println("Pena");
+        } else if (peso < 77) {
+            System.out.println("Médio");
+        } else if (peso < 85) {
+            System.out.println("Meio-pesado");
+        } else {
+            System.out.println("Pesado");
+        }
     }
 }
