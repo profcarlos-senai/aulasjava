@@ -1,4 +1,4 @@
-Ana 25	F
+Ana	25	F
 Bruno	30	M
 Carla	22	F
 Diego	28	M
