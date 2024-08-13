@@ -8,5 +8,6 @@ public class Teste5 {
         }
 
         // for(o_que_fazer_antes; condição_pra_continuar; o_que_fazer_depois){ }
+
     }
 }
