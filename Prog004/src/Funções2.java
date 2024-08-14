@@ -1,35 +1,23 @@
-/*
-- peça a cotação do dólar e o preço do produto em dólar
-  e imprima o preço em reais
-  ex: dólar: 5,50 preço: 2
-      Preco em R$: 11,0
-
- Todas as variáveis são float e puxa com nextFloat()
- ou double e puxa com nextDouble()
- */
-
 import java.util.Scanner;
 
 public class Funções2 {
+
+    static float calculaPerc(float parte, float todo){
+        float percentual = parte/todo*100;
+        return percentual;
+    }
+
     public static void main(String[] args) {
-        Scanner leitor = new Scanner(System.in);
+        // faça um programa pergunte total de alunos, quantos alunos faltaram e
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Total de alunos: ");
+        int total = teclado.nextInt();
+        System.out.print("Quantos faltaram: ");
+        int faltas = teclado.nextInt();
 
-        // variáveis
-        float cotação, preço, reais;
-
-        // digitar cotação
-        System.out.println("Qual a cotação do dólar hoje?");
-        cotação = leitor.nextFloat();
-
-        // digitar preço
-        System.out.println("Quanto custa o trequinho?");
-        preço = leitor.nextFloat();
-
-        // calcular valor em reais
-        reais =  preço * cotação;
-
-        // imprimir valor em reais
-        System.out.println("R$: "+reais);
-        System.out.printf("Valor em R$: %.2f",reais);
+        // calcule quantos % faltaram
+        // exemplo: 40 alunos faltaram 8, são 20%
+        float percFaltas = calculaPerc(faltas, total);
+        System.out.printf("%.1f %% dos alunos faltaram\n", percFaltas);
     }
 }
