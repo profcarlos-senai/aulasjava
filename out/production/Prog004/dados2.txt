@@ -1,0 +1,10 @@
+Ana	25	F
+Bruno	30	M
+Carla	22	F
+Diego	28	M
+Elisa	35	F
+Felipe	40	M
+Gabi	27	F
+Hugo	33	M
+Inês	29	F
+João	24	M
