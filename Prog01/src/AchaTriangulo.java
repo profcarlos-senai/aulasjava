@@ -5,6 +5,7 @@ public class AchaTriangulo {
             double h = Math.sqrt(2*(c*c));
 
             System.out.printf("A=%22.20f, B=%22.20f, C=%22.20f\n", c, c, h);
+            System.out.println();
         }
     }
 }
